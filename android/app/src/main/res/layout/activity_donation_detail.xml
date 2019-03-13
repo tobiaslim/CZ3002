@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Campaigns"/>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView android:layout_width="fill_parent"
+                    android:layout_height="250dp"
+                    android:id="@+id/donation_detail_background"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/give_image"
+                    />
+
+
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_marginTop="180dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/card_view"
+                    android:background="#908D8E"
+                    android:padding="5dp"
+                    card_view:cardBackgroundColor="#FFFFFF"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="2dp"
+                    card_view:contentPadding="5dp"
+                    android:foreground="?selectableItemBackground"
+                    android:clickable="false">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Status of donation"
+                            android:textColor="#000000"
+                            android:id="@+id/statusOfDonationTitle"
+                            card_view:layout_constraintLeft_toLeftOf="parent"
+                            android:textSize="22sp"
+                            android:textAlignment="center"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="51"
+                            android:layout_marginTop="7dp"
+                            card_view:layout_constraintTop_toBottomOf="@+id/statusOfDonationTitle">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="12"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/firstSection"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/highlighted_1"/>
+
+                                <TextView android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pending"
+                                    android:textColor="#000000"
+                                    android:id="@+id/CompleteDonation"
+                                    android:textSize="15sp"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="12"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/secondSection"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/unhighlighted_2"/>
+
+                                <TextView
+                                    android:id="@+id/approvedRejectTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Approved/Rejected"
+                                    android:textColor="#000000"
+                                    android:textSize="15sp"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="12"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/thirdSection"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/unhighlighted_3"/>
+
+                                <TextView android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="In progress"
+                                    android:textColor="#000000"
+                                    android:textSize="15sp"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="12"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/forthSection"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/unhighlighted_4"/>
+
+                                <TextView android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Completed"
+                                    android:textColor="#000000"
+                                    android:textSize="15sp"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/card_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="7dp"
+                android:background="#908D8E"
+                android:clickable="false"
+                android:foreground="?selectableItemBackground"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="2dp"
+                app:contentPadding="5dp">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/itemsDonatedTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ITEMS TO BE DONATED:"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/itemAndQuantityTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Newspaper"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@+id/itemsDonatedTitle" />
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:id="@+id/card_view_2"
+                android:background="#908D8E"
+                card_view:cardBackgroundColor="#FFFFFF"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="2dp"
+                card_view:contentPadding="5dp"
+                android:foreground="?selectableItemBackground"
+                android:clickable="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/dateLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="5"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/collectionDate"
+                            android:text="COLLECTION DATE:"
+                            android:textSize="14sp"
+                            android:layout_weight="5"
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/collectionDateTextView"
+                            android:text="5th September 2018"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:layout_weight="5"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="5"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/collectionTimeSlotTitle"
+                            android:text="COLLECTION TIMESLOT:"
+                            android:textSize="14sp"
+                            android:layout_weight="5"
+
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/collectionTimeSlotTextView"
+                            android:text="1700 - 1800"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:layout_weight="5"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="5"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/collectionAddressTitle"
+                            android:text="COLLECTION ADDRESS:"
+                            android:textSize="14sp"
+                            android:layout_weight="5"
+
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/collectionAddressTextView"
+                            android:text="asdasdasd"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:layout_weight="5"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_view_3"
+                android:background="#908D8E"
+                card_view:cardBackgroundColor="#FFFFFF"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="2dp"
+                card_view:contentPadding="5dp"
+                android:foreground="?selectableItemBackground"
+                android:clickable="false">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/assignVolunteer"
+                        android:text="VOLUNTEER DETAILS"
+                        android:textSize="14sp"
+                        card_view:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/volunterDetailsTextView"
+                        android:text="James Lee, 91234567"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:layout_marginRight="28dp"
+                        card_view:layout_constraintTop_toBottomOf="@+id/assignVolunteer"
+
+                        />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

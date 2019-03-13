@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/campaign"
+        android:icon="@drawable/ic_flag"
+        android:title="Campaigns"/>
+
+    <item
+        android:id="@+id/donation"
+        android:icon="@drawable/ic_donation"
+        android:title="Donations" />
+
+    <item
+        android:id="@+id/tree"
+        android:icon="@drawable/ic_tree"
+        android:title="Tree" />
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_settings_1"
+        android:title="Setting" />
+</menu>

@@ -1,0 +1,224 @@
+@baseurl = http://localhost/public
+@contentype = Content-Type: application/json
+@authorization = Authorization: Basic tobias456@gmail.com aHFHejgxcjBOVE5ZUlA0SkV5SlowNGRuWUJKWFlFaDc1NnRmSzAwZA==
+tobias123@gmail.com ZGJSa01wR3VTR3doSTRYRnpBS1lIelAwM3o3R2RjWHBFMGpnYnJraw==
+tobias456@gmail.com aHFHejgxcjBOVE5ZUlA0SkV5SlowNGRuWUJKWFlFaDc1NnRmSzAwZA==
+tobiaslkj@gmail.com c0xUVmtVd3ZuSFh0OUdBY0Qzc1lSTWxwaHU1N1pNbXlmdE1yeUZncw==
+### Create user
+POST {{baseurl}}/users HTTP/1.0
+{{contentype}}
+
+{
+	"email":"tobiaslim@gmail.com",
+	"first_name":"test first name",
+	"last_name":"test last name",
+	"password":"Pa$$w0rd!"
+}
+
+### Edit User
+PUT {{baseurl}}/users HTTP/1.0
+{{contentype}}
+{{authorization}}
+
+{
+    "email":"tobias123@gmail.com",
+    "first_name":"ha",
+    "last_name":"woo"
+}
+
+### Create Session
+POST {{baseurl}}/sessions HTTP/1.0
+{{contentype}}
+
+{
+    "email":"tobias456@gmail.com",
+    "password":"password"
+}
+
+### Check session
+GET {{baseurl}}/sessions HTTP/1.0
+{{contentype}}
+{{authorization}}
+
+### Create Campaign Manager
+POST {{baseurl}}/users/campaignmanagers HTTP/1.0
+{{authorization}}
+{{contentype}}
+
+{
+    "UEN":"T19932220",
+    "organization_name":"Tobias"
+}
+
+### Get current session campagin manager information
+GET {{baseurl}}/users/campaignmanagers HTTP/1.0
+{{contentype}}
+{{authorization}}
+
+### Get all items
+GET {{baseurl}}/items HTTP/1.1
+{{contentype}}
+
+### Create Campaign
+POST {{baseurl}}/campaigns HTTP/1.0
+{{authorization}}
+{{contentype}}
+
+{
+    "name": "Hair For Charity",
+    "start_date": "2018-11-07",
+    "end_date": "2018-11-08",
+    "accepted_items": [5,6,7],
+	"start_time": "12",
+	"end_time": "17",
+	"description": "wtfffff",
+	"collection_point": "Block ass",
+	"postal_code": "750469"
+}
+
+### Create Donation
+POST {{baseurl}}/donations/campaigns/1 HTTP/1.0
+{{authorization}}
+{{contentype}}
+
+{
+	"address_id":2,
+	"pickup_date":"date",
+	"pickup_time":"time",
+	"items":{
+		"keys":[1,2,4],
+		"values":[4,4,5]
+	}
+}
+
+### Get all donations based on user session
+GET {{baseurl}}/donations HTTP/1.0
+{{authorization}}
+{{contentype}}
+
+### Get all campaigns
+GET {{baseurl}}/campaigns
+{{contentype}}
+
+{
+	"max":3
+}
+
+### Create address 
+POST {{baseurl}}/addresses HTTP/1.0
+{{authorization}}
+{{contentype}}
+
+{
+	"addresses":[
+		{
+			"street_name":"Block 469 AdmiraltyDrive",
+			"unit":"#16-55",
+			"zip":"750469"
+		},
+		{
+			"street_name":"Bhehehee",
+			"unit":"#16-25",
+			"zip":"750322"
+		}
+		]
+}
+
+### Get Addresses
+GET {{baseurl}}/addresses HTTP/1.0
+{{authorization}}
+{{contentype}}
+
+### Cancel Donation
+PATCH {{baseurl}}/donations/2 HTTP/1.0
+{{authorization}}
+{{contentype}}
+
+### View Donation
+GET {{baseurl}}/donations/1
+{{authorization}}
+{{contentype}}
+
+### Get org name by uen
+GET {{baseurl}}/uen HTTP/1.0
+{{contentype}}
+
+{
+	"uen":"T18SS068E"
+}
+
+###  Get campaign by campaign id
+GET {{baseurl}}/campaigns/1 HTTP/1.0
+{{contentype}}
+
+### Campaign maanger get donations for his campaign by id
+GET {{baseurl}}/donations/campaignmanagers/campaigns/1
+{{contentype}}
+{{authorization}}
+
+### Campaign manager get a donation
+GET {{baseurl}}/donations/2/campaignmanagers
+{{contentype}}
+{{authorization}}
+
+### Campaign manager get all campaigns
+GET {{baseurl}}/campaigns/campaignmanagers
+{{contentype}}
+{{authorization}}
+
+### Reject a donation
+PATCH {{baseurl}}/donations/2/campaignmanagers
+{{contentype}}
+{{authorization}}
+
+{
+	"action":"reject"
+}
+
+
+### Approve a donation
+PATCH {{baseurl}}/donations/1/campaignmanagers
+{{contentype}}
+{{authorization}}
+
+{
+	"action":"approve"
+}
+
+### Assign volunteer to a donation and make it in progress.
+PATCH {{baseurl}}/donations/1/campaignmanagers
+{{contentype}}
+{{authorization}}
+
+{
+	"action":"in-progress",
+	"volunteer_name":"Redmond Goon",
+	"volunteer_HP":"98219221"
+}
+
+### Mark a donation as completed
+PATCH {{baseurl}}/donations/1/campaignmanagers
+{{contentype}}
+{{authorization}}
+
+{
+	"action":"complete"
+}
+
+### Cancel a donation
+PATCH {{baseurl}}/donations/1/campaignmanagers
+{{contentype}}
+{{authorization}}
+
+{
+	"action":"cancel"
+}
+
+### Count donations by status
+GET {{baseurl}}/donations/count
+{{contentype}}
+{{authorization}}
+
+{
+	"countBy":"Completed"
+}

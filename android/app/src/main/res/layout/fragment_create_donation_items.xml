@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.createdonation.ChooseItemsFragment"
+    android:background="@color/slightlyWhite"
+    android:weightSum="20">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+        <View
+            android:id="@+id/textBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle"/>
+
+        <TextView
+            android:fontFamily="@font/roboto"
+            android:id="@+id/myImageViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textBackground"
+            android:layout_alignTop="@id/textBackground"
+            android:layout_alignRight="@id/textBackground"
+            android:layout_alignBottom="@id/textBackground"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:text="@string/message_create_donation_choose_item"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/selection_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:overScrollMode="never">
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="3"
+        android:background="@color/white"
+        android:elevation="5dp">
+        <Button
+            style="@style/AppTheme.Button.GetStarted"
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:text="Next"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:fontFamily="@font/roboto"
+            android:id="@+id/noItemSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="No item selected"
+            android:textColor="@color/slightlyBlack"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

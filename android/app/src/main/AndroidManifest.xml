@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.harrisonwjy.charitree">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.onboarding.OnboardingActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.harrisonwjy.charitree.views.MainActivity"
+            android:theme="@style/Theme.AppCompat.ThemeLight" />
+        <activity
+            android:name=".views.setting.RegisterCMActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.harrisonwjy.charitree.views.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".views.campaignmanager.CampaignManagerActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.harrisonwjy.charitree.views.CampaignDetailActivity"
+            android:label="@string/title_activity_campaign_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.harrisonwjy.charitree.views.createdonation.CreateDonationActivity"
+            android:label="@string/title_activity_create_donation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".views.campaignmanager.CreatedCampaignDetailActivity"
+            android:label="@string/title_activity_created_campaign_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.harrisonwjy.charitree.views.createdonation.address.CreateAddressActivity"
+            android:label="@string/title_activity_create_donation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.harrisonwjy.charitree.views.DonationDetailActivity"
+            android:label="@string/title_activity_donation_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".views.campaignmanager.createcampaign.CreateCampaignActivity"
+            android:label="Create Campaign">
+        </activity>
+        <activity android:name=".views.campaignmanager.DonorListActivity"
+            android:label="Donor List"></activity>
+
+        <activity android:name=".views.campaignmanager.CampaignDonationDetailActivity"
+            android:label="Donation Detail"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".views.campaignmanager.AssignVolunteerActivity"
+            android:label="Assign a Volunteer"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Charitree</string>
+    <string name="action_settings">Cancel Donation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="token"></string>
+
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_org_name">Organisation\'s Name</string>
+    <string name="hint_uen">Unique Entity Number</string>
+
+
+    <string name="error_message_email">Please enter a valid email</string>
+    <string name="error_message_password">Please enter a password of at least 8 characters</string>
+    <string name="error_message_generic">Please fill up for this field</string>
+    <string name="error_message_org_name">Please enter a organisation name</string>
+    <string name="error_message_uen">Please enter a valid UEN</string>
+
+    <string name="message_onboard">Donate to grow</string>
+    <string name="message_register1">Well...</string>
+    <string name="message_register2">Hello there, Kind Soul</string>
+    <string name="message_campaign_register_tagline">Want to post a Donation Campaign? Register as a Campaign Mananger first</string>
+    <string name="message_registeration_success">Registeration successful!</string>
+    <string name="message_create_address1">Add an address.</string>
+    <string name="message_create_address2">Don\'t worry. We only find you when you have things to donate :)</string>
+
+    <string name="button_get_started">Get Started</string>
+    <string name="button_register">Register</string>
+    <string name="button_register_cm">Register</string>
+    <string name="button_go_to_login">Got an account? Click here to login</string>
+    <string name="button_go_to_login2">Back to Login</string>
+    <string name="button_create_address">Add address</string>
+
+
+    <string name="title_activity_campaign_detail">CampaignDetailActivity</string>
+    <string name="title_activity_create_donation">Add an address</string>
+    <string name="title_activity_donation_detail">Donation</string>
+
+    <string name="message_create_donation_choose_item">I want to donate the following items</string>
+    <string name="message_create_donation_choose_quantity">The quantity of each donated item will be around the size of</string>
+    <string name="title_activity_created_campaign_detail">CreatedCampaignDetailActivity</string>
+    <string name="message_create_donation_choose_date_time">I want my items to pick up on</string>
+    <string name="message_create_donation_choose_address">Where should we collect these items?</string>
+</resources>
